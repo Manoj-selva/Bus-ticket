@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Ticket Booking</title>
+<style>
+h1{
+	color: #0000FF;
+	text-align: center;
+	font-family: monospace;
+}
+body{
+	
+}
+table,tr,td{
+	font-family:monospace;
+	font-weight :bold;
+	padding:30px;
+	font-size: 20px;
+}
+</style>
+</head>
+<body>
+<h1>ABC Travels</h1>
+<center>
+<form>
+	<table>
+			
+				<tr><td>Agent Name</td><td><input type="text" name="name" id="name" pattern="[A-Za-z\s]+" placeholder="Enter the Name" required="required"></td></tr>
+				<tr><td>Mobile No</td><td><input type="tel" name="mobile" id="mobile" pattern="[6789][0-9]{9}"  required="required"></td></tr>
+				<tr><td>Password</td><td><input type="text" name="to" id="to" pattern="[0-9A-Za-z\s]+"  required="required"></td></tr>
+				<tr><td><input type="submit" name="submit" value="Submit" onclick="save()"></td>
+				<td><a href="./menu.html"><input type="submit" name="reset" value="Logout" ></a></td></tr>
+				<td id="result"></td>
+	</table>
+	
+</form>
+</center>
+<script>
+	function save(){
+			a = Math.random();
+			//To generate a number that is a whole number rounded down
+			b = Math.floor(Math.random());
+			/*To generate a number that is a whole number rounded down between
+			1 and 10 */
+			c= Math.floor(Math.random() * 10) + 1 ;
+			document.getElementById("result").innerHTML = "The Agent code is " + c;
+	}
+</script>
+
+</body>
+</html>
